@@ -34,7 +34,7 @@ This survives reinstalling the game.
 
 ## Tested with
 
-The Meta Rift version of Demeo (game version 1.42, Unity 6000.0.60f1) on Windows, with BepInEx 5.4.22. It has not been tried on other versions.
+The Windows version of Demeo (game version 1.42, Unity 6000.0.60f1; its install folder is named `demeorift_release`), played on a Meta Quest 2 connected to the PC, with BepInEx 5.4.22. It has not been tried on other versions or headsets.
 
 ## Install
 
