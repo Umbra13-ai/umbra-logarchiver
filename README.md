@@ -11,11 +11,11 @@ Each session gets a dated folder, such as `LogArchive\2026-11-09_19-30-05\`, hol
 | `LogOutput.log` | BepInEx and mod log (HouseRules activation, syncs, warnings). |
 | `Player.log` | Unity log: the game's own events, errors and frame hitches. |
 | `MotherBrainLog{0}.txt` | Demeo's internal log. |
-| `session.txt` | Start time, game version and source paths. |
+| `session.txt` | Start time, game and Unity versions, and the paths of the source logs. |
 
-The logs are copied every 2 minutes during play and again when the game closes. At the next launch, Unity's `Player-prev.log` replaces the last copy of `Player.log`, so that file is always complete. If the game crashes, `LogOutput.log` loses at most the last 2 minutes.
+The logs are copied every 2 minutes during play and again when the game closes. At the next launch, Unity's `Player-prev.log` replaces the last copy of `Player.log` in the previous session's folder, so that file is complete. If the previous session ran without this plugin, its Unity log is kept in a folder of its own, named with a `_unity-log-only` suffix. If the game crashes, the BepInEx and Demeo logs lose at most the last copy interval.
 
-Nothing in the archive is ever deleted. A session usually takes 5 to 25 MB.
+Nothing in the archive is ever deleted. A short launch takes a few hundred KB; a long session takes roughly 10 to 20 MB.
 
 ## Location
 
@@ -30,7 +30,11 @@ This survives reinstalling the game.
 
 - `Enabled`: turns archiving on or off (default `true`).
 - `ArchiveFolder`: a different archive folder (default empty, meaning the location above).
-- `CopyIntervalMinutes`: how often logs are copied during play (default `2`).
+- `CopyIntervalMinutes`: how often logs are copied during play (default `2`; values below `1` are treated as `1`).
+
+## Tested with
+
+The Meta Rift version of Demeo (game version 1.42, Unity 6000.0.60f1) on Windows, with BepInEx 5.4.22. It has not been tried on other versions.
 
 ## Install
 
@@ -42,4 +46,4 @@ Copy `LogArchiver.dll` into `BepInEx\plugins`. The plugin patches nothing in the
 
 ## History
 
-Written on 8 November 2026 inside the Demeo Revolutions fork (commit b0f9cd6 there) and moved to its own repository on 9 November 2026. By Umbra, MIT licence.
+Written on 8 November 2026 for a Demeo Revolutions setup and moved to its own repository on 9 November 2026. By Umbra, MIT licence. Not affiliated with Resolution Games.
