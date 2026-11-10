@@ -21,7 +21,7 @@ namespace LogArchiver
     {
         internal const string ModId = "com.demeorevolutions.logarchiver";
         internal const string ModName = "LogArchiver";
-        internal const string ModVersion = "3.12.0";
+        internal const string ModVersion = "1.0.0";
 
         private const string FolderTimeFormat = "yyyy-MM-dd_HH-mm-ss";
 

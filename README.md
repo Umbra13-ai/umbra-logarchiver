@@ -46,4 +46,4 @@ Copy `LogArchiver.dll` into `BepInEx\plugins`. The plugin patches nothing in the
 
 ## History
 
-Written on 8 November 2026 for a Demeo Revolutions setup and moved to its own repository on 9 November 2026. Version numbers continue from the Demeo Revolutions releases; the first public release is 3.12.0. By Umbra, MIT licence. Not affiliated with Resolution Games.
+Written on 8 November 2026 for a Demeo Revolutions setup and moved to its own repository on 9 November 2026. The first public release is 1.0.0. By Umbra, MIT licence. Not affiliated with Resolution Games.
